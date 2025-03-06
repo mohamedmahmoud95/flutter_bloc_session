@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/todo_cubit.dart';
-import '../data/todo_model.dart';
-
+import '../bloc/todo_state.dart';
 
 class TodoApp extends StatelessWidget {
   const TodoApp({super.key});
@@ -51,12 +50,12 @@ class TodoScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: BlocBuilder<TodoCubit, List<Todo>>(
-              builder: (context, todos) {
+            child: BlocBuilder<TodoCubit, TodoState>(
+              builder: (context, state) {
                 return ListView.builder(
-                  itemCount: todos.length,
+                  itemCount: state.todos.length,
                   itemBuilder: (context, index) {
-                    final todo = todos[index];
+                    final todo = state.todos[index];
                     return ListTile(
                       title: Text(todo.title),
                       leading: Checkbox(
