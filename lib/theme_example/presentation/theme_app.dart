@@ -12,6 +12,7 @@ class ThemeApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeData>(
         builder: (context, theme) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: theme,
             home: ThemeScreen(),
           );

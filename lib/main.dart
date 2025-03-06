@@ -1,3 +1,4 @@
+import 'package:bloc_session/form_validation_example/presentation/form_screen.dart';
 import 'package:bloc_session/theme_example/presentation/theme_app.dart';
 import 'package:bloc_session/todo_app_example/presentation/todo_app.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ void main() {
 
   //CounterApp()
   //ThemeApp()
-  TodoApp()
+  //TodoApp()
+    FormValidationApp()
   );
 }
