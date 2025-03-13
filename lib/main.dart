@@ -4,6 +4,7 @@ import 'package:bloc_session/4_theme_example/presentation/theme_app.dart';
 import 'package:bloc_session/5_todo_app_example/presentation/todo_app.dart';
 import 'package:bloc_session/8_bloc_counter/bloc/counter_observer.dart';
 import 'package:bloc_session/8_bloc_counter/presentation/counter_bloc_app.dart';
+import 'package:bloc_session/9_timer_app_example/timer_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '0_counter_app_using_setState/counter_app.dart';
@@ -15,7 +16,7 @@ import '7_api_integration_example/presentation/news_feed.dart';
 
 void main() {
 
-    Bloc.observer = const CounterObserver();
+  Bloc.observer = const CounterObserver();
 
   runApp(const
   //CounterAppUsingSetState(),
@@ -28,7 +29,8 @@ void main() {
   //TodoApp()
   //FormValidationApp()
   //NewsApp()
-  CounterBlocApp(),
+  //CounterBlocApp(),
+  TimerApp()
 
   );
 }
